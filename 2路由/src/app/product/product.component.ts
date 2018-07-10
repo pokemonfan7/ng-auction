@@ -21,10 +21,10 @@ export class ProductComponent implements OnInit {
     // 参数订阅
     this.routerInfo.params.subscribe((params: Params) => this.productId = params['id']);
 
-    // this.routerInfo.data.subscribe((data: {product: Product}) => {
-    //   this.productId = data.product.id;
-    //   this.productName = data.product.name;
-    // });
+    this.routerInfo.data.subscribe((data: {product: Product}) => {
+      this.productId = data.product.id;
+      this.productName = data.product.name;
+    });
   }
 
 }

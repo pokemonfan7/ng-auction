@@ -11,9 +11,9 @@ export class ProductResolve implements Resolve<Product> {
     ) {}
 
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Product>|Promise<Product>|Product {
-        const productId: number = route.params['id'];
+        const productId: string = route.params['id'];
 
-        if ( productId === 1 ) {
+        if ( productId === '1' ) {
             return new Product(1, 'NS');
         } else {
             this.router.navigate(['/home']);
