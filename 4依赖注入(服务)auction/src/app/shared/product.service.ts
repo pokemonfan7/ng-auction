@@ -26,7 +26,7 @@ export class ProductService {
     return this.products;
   }
 
-  getProduct(id: number): product {
+  getProduct(id: number): Product {
     return this.products.find((product) => product.id === id);
   }
 
